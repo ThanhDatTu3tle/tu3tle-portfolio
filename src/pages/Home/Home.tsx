@@ -18,8 +18,8 @@ const Home: React.FC<any> = () => {
             "type": "Development"
         },
         {
-            "name": "tu3tle porfolio",
-            "detail": "My porfolio",
+            "name": "tu3tle portfolio",
+            "detail": "My portfolio",
             "link": "https://tu3tle-portfolio.vercel.app/",
             "type": "Design & Development"
         },
