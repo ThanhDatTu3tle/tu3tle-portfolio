@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 70%;
+    width: 80%;
     height: fit-content;
     background-color: transparent;
 }
@@ -26,7 +26,7 @@
 
     .intro {
         font-size: 3rem;
-        margin: 10px 0px 10px 0px;
+        margin: 10px 0px 0px 0px;
     }
 }
 
@@ -35,9 +35,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 35%;
+    width: 40%;
     height: fit-content;
     padding: 50px;
+
+    .social {
+        cursor: pointer;
+
+        &:hover {
+            color: #ed6c02;
+        }
+    }
 }
 
 .work {
@@ -63,3 +71,13 @@
     cursor: pointer;
 }
 
+.about {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 66%;
+    height: fit-content;
+    padding: 50px;
+    font-size: 2rem;
+}

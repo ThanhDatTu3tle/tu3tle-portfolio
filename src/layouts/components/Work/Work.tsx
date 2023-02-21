@@ -20,6 +20,10 @@ const Work: React.FC<any> = ({ data }) => {
         setIsHovered(false);
     }
 
+    const handleLink = () => {
+        window.location.href = `${data.link}`
+    }
+
     return (
         <div className={cx('wrapper')} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}>
             {isHovered === false ? (
@@ -28,15 +32,15 @@ const Work: React.FC<any> = ({ data }) => {
                     
                     <span>{data.detail}</span>
 
-                    <Button primary>Development</Button>
+                    <Button primary>{data.type}</Button>
                 </div>
             ) : (
-                <div className={cx('hover')}>
+                <div className={cx('hover')} onClick={handleLink}>
                     <h4>{data.name}</h4>
                     
                     <span>{data.detail}</span>
 
-                    <Button primary>Development</Button>
+                    <Button primary>{data.type}</Button>
                 </div>
             )}
         </div>

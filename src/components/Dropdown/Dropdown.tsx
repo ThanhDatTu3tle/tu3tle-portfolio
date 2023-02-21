@@ -1,6 +1,4 @@
 import * as React from 'react';
-// import { useState, useEffect } from 'react';
-// import { Link } from 'react-router-dom';
 import classNames from "classnames/bind";
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
@@ -11,11 +9,10 @@ import Popper from '@mui/material/Popper';
 import MenuItem from '@mui/material/MenuItem';
 import MenuList from '@mui/material/MenuList';
 import MenuIcon from '@mui/icons-material/Menu';
-import { grey } from '@mui/material/colors';
 
 import styles from './Dropdown.module.scss';
 
-const options = ['Home', 'Work', 'About', 'Blog', 'Contact'];
+const options = ['Home', 'Work', 'About', 'Contact'];
 
 const cx = classNames.bind(styles)
 
@@ -28,11 +25,11 @@ const Dropdown: React.FC<any> = () => {
     const handleMenuItemClick = (event: any, index: any) => {
       setSelectedIndex(index);
       setOpen(false);
-
+      
       switch(index) {
         case 0:
             console.log('Home')
-            window.location.href = `${process.env.REACT_APP_BASE_URL}#home`
+            window.location.href = `${process.env.REACT_APP_BASE_URL}`
             break
         case 1:
             console.log('Work')
