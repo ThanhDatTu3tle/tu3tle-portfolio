@@ -29,23 +29,23 @@ const Dropdown: React.FC<any> = () => {
       switch(index) {
         case 0:
             console.log('Home')
-            window.location.href = `${process.env.REACT_APP_BASE_URL}`
+            window.location.href = `https://tu3tle-portfolio.vercel.app/`
             break
         case 1:
             console.log('Work')
-            window.location.href = `${process.env.REACT_APP_BASE_URL}#work`
+            window.location.href = `https://tu3tle-portfolio.vercel.app/#work`
             break
         case 2:
             console.log('About')
-            window.location.href = `${process.env.REACT_APP_BASE_URL}#about`
+            window.location.href = `https://tu3tle-portfolio.vercel.app/#about`
             break
         case 3:
             console.log('Blog')
-            window.location.href = `${process.env.REACT_APP_BASE_URL}#blog`
+            window.location.href = `https://tu3tle-portfolio.vercel.app/#blog`
             break
         case 4:
             console.log('Contact')
-            window.location.href = `${process.env.REACT_APP_BASE_URL}#contact`
+            window.location.href = `https://tu3tle-portfolio.vercel.app/#contact`
             break
         default:
             console.log('Gãy!!!')
