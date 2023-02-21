@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 // import { Link } from 'react-router-dom';
 import classNames from "classnames/bind";
 
@@ -7,16 +7,29 @@ import styles from './Home.module.scss';
 import Header from '../../layouts/components/Header/Header';
 import Title from '../../components/Title/Title';
 import Image from '../../components/Image/Image';
+import Work from '../../layouts/components/Work/Work';
 
 const cx = classNames.bind(styles)
 
 const Home: React.FC<any> = () => {
+
+    const work = [
+        {
+            "name": "Clone - Lotteria",
+            "detail": "Rebuilt from an interface, and database to a business flow based on Lotteria's website",
+        },
+        {
+            "name": "tu3tle porfolio",
+            "detail": "My porfolio",
+        },
+        {
+            "name": "In js we trust - quiz app",
+            "detail": "Website to test JavaScript level for everyone, all questions are from Mr. Vuong Nguyen and the UI is made by me - tu3tle.",
+        },
+    ]
+
     return (
-        <div className={cx('wrapper')}>
-            <div className={cx('header')}>
-                <Header />
-            </div>
-            
+        <div className={cx('wrapper')}>            
             <div className={cx('container')}>
                 <div className={cx('info')}>
                     <div className={cx('intro')}>
@@ -58,23 +71,18 @@ const Home: React.FC<any> = () => {
                     </div>
                 </div>
 
-                <Title content='Work - My products' id='work'/>
+                <Title content='Work' id='work'/>
                 <div className={cx('work')}>
-                    
-                    <div className={cx('components')}>
-                        <Image src='https://i.imgur.com/JfkXoG5.png'/>
-                        <h3>Lotteria Clone</h3>
-                    </div>
+                    {
+                        work.map((data) => (
+                            <Work key={data} data={data}/>
+                        ))
+                    }
+                </div>
 
-                    <div className={cx('components')}>
-                        <Image src='https://i.imgur.com/BGwKMW0.png'/>
-                        <h3>tu3tle Porfolio</h3>
-                    </div>
-
-                    <div className={cx('components')}>
-                        <Image src='https://i.imgur.com/J8PjWiM.png'/>
-                        <h3>In js we trust - quiz app</h3>
-                    </div>
+                <Title content='About' id='about'/>
+                <div className={cx('about')}>
+                    <p>Ngu</p>
                 </div>
             </div>
         </div>
